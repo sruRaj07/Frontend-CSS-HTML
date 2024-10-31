@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    
+}
+
+.breathing-text {
+    font-size: 15vw;
+    font-weight: 100;
+    line-height: 10vw;
+    display: flex;
+    gap: 0.1em;
+    color: #f0f4f8;
+    font-variation-settings: 'wght'100,'wdth'85;
+}
+
+.breathing-text span {
+    display: inline-block;
+    animation: breathe 4000ms ease-in-out infinite;
+}
+
+.breathing-text span:nth-child(1) { animation-delay: 0s; }
+.breathing-text span:nth-child(2) { animation-delay: 0.2s; }
+.breathing-text span:nth-child(3) { animation-delay: 0.4s; }
+.breathing-text span:nth-child(4) { animation-delay: 0.6s; }
+.breathing-text span:nth-child(5) { animation-delay: 0.8s; }
+.breathing-text span:nth-child(6) { animation-delay: 1s; }
+.breathing-text span:nth-child(7) { animation-delay: 1.2s; }
+.breathing-text span:nth-child(8) { animation-delay: 1.4s; }
+.breathing-text span:nth-child(9) { animation-delay: 1.6s; }
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}

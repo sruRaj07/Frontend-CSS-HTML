@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Drone City</title>
+</head>
+<body>
+
+    <div id="home">
+
+        <!-- For the Floating navbar-->
+     <div class="wrapper" id="searchboxwrapper">
+        <div class="child">
+            <input type="text" placeholder="search" id="search"> 
+        </div>
+        <div class="child" id="products">Products</div>
+        <div class="child" id="services">Services</div>
+        <div class="child" id="about">About Us</div>
+     </div>
+        <!-- drone box-->
+         <div id="drone-box">
+            <img src="Drone_Img/drone.png" class="drone-pic">
+            <img src="Drone_Img/drone-left.png" class="drone-left">
+            <img src="Drone_Img/drone-right.png" class="drone-right">
+
+         </div>
+
+         <!-- Content -->
+          <div class="content">
+            <h1>Drone City of India</h1>
+            <p>Welcome to the world's best drone roducing hub.</p>
+            <h2 class="changing-text">You think <span></span></h2>
+          </div>
+    </div>
+
+    <!-- Scipt for the movement of the drone-->
+     <script>
+        $('#home').mousemove(function(e){
+            var moveX = (e.pageX * -1/2) + 300;
+            var moveY = (e.pageY * -1/3) + 120;
+            $('#drone-box').css({
+                'transform' : 'translate3d('+moveX+'px, '+moveY+'px,0)'
+            });
+        })
+     </script>
+    
+</body>
+</html>
