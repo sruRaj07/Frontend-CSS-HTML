@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.recorder {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* for the header section*/
+.header{
+    padding-bottom: 25px;
+}
+.breathing-text {
+    font-size: 10vw;
+    font-weight: 100;
+    line-height: 10vw;
+    display: flex;
+    gap: 0.1em;
+    color: #f0f4f8;
+    font-variation-settings: 'wght'100,'wdth'85;
+}
+
+.breathing-text span {
+    display: inline-block;
+    animation: breathe 4000ms ease-in-out infinite;
+}
+
+.breathing-text span:nth-child(1) { animation-delay: 0s; }
+.breathing-text span:nth-child(2) { animation-delay: 0.2s; }
+.breathing-text span:nth-child(3) { animation-delay: 0.4s; }
+.breathing-text span:nth-child(4) { animation-delay: 0.6s; }
+.breathing-text span:nth-child(5) { animation-delay: 0.8s; }
+.breathing-text span:nth-child(6) { animation-delay: 1s; }
+.breathing-text span:nth-child(7) { animation-delay: 1.2s; }
+.breathing-text span:nth-child(8) { animation-delay: 1.4s; }
+.breathing-text span:nth-child(9) { animation-delay: 1.6s; }
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+#cameraFeed {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#startRecording, #stopRecording, .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#stopRecording {
+    background-color: #d9534f;
+    color: white;
+}
+
+#startRecording {
+    background-color: #5cb85c;
+    color: white;
+}
+.download-button {
+    background-color: #007bff; /* Blue background */
+    color: white;              /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;         /* Space between download and other buttons */
+    border-radius: 4px;        /* Optional: rounded corners */
+}
